@@ -7,6 +7,11 @@ const routes: Routes = [
     loadChildren: () =>
       import("./owner/owner.module").then((route) => route.OwnerModule),
   },
+  {
+    path: "user",
+    loadChildren: () =>
+      import("./user/user.module").then((route) => route.UserModule),
+  },
 ];
 
 @NgModule({

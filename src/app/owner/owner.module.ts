@@ -3,9 +3,10 @@ import { CommonModule } from '@angular/common';
 
 import { OwnerRoutingModule } from './owner-routing.module';
 import { OwnerComponent } from './owner/owner.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
-  declarations: [OwnerComponent],
+  declarations: [OwnerComponent, RegisterComponent],
   imports: [
     CommonModule,
     OwnerRoutingModule
