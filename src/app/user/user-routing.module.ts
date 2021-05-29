@@ -3,13 +3,8 @@ import { Routes, RouterModule } from "@angular/router";
 import { CashierComponent } from "./cashier/cashier.component";
 import { FinanceComponent } from "./finance/finance.component";
 import { InventoryComponent } from "./inventory/inventory.component";
-import { LoginComponent } from "./login/login.component";
 
 const routes: Routes = [
-  {
-    path: "login",
-    component: LoginComponent,
-  },
   {
     path: "inventory",
     component: InventoryComponent,

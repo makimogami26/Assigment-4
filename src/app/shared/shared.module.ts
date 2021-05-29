@@ -7,6 +7,7 @@ import { SupplierComponent } from "./supplier/supplier.component";
 import { PurchaseOrderComponent } from "./purchase-order/purchase-order.component";
 import { FormPurchaseOrderComponent } from "./form-purchase-order/form-purchase-order.component";
 import { InvoiceComponent } from "./invoice/invoice.component";
+import { TopTenProductComponent } from "./top-ten-product/top-ten-product.component";
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { InvoiceComponent } from "./invoice/invoice.component";
     PurchaseOrderComponent,
     FormPurchaseOrderComponent,
     InvoiceComponent,
+    TopTenProductComponent,
   ],
   imports: [CommonModule],
   exports: [
@@ -27,6 +29,7 @@ import { InvoiceComponent } from "./invoice/invoice.component";
     SupplierComponent,
     InvoiceComponent,
     PurchaseOrderComponent,
+    TopTenProductComponent,
   ],
 })
 export class SharedModule {}

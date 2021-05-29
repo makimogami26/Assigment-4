@@ -7,3 +7,7 @@ div.login-box div.card.card-outline.card-primary {
 div.card-header.text-center {
   border-bottom: 1px solid white;
 }
+
+small.invalid {
+  color: red;
+}

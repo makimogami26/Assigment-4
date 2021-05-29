@@ -3,6 +3,7 @@ div.card.supplier {
   border-radius: 6px;
 }
 
-h2 {
+h2,
+h4.modal-title {
   font-weight: bold;
 }

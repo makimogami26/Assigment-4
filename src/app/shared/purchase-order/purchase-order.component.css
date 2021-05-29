@@ -3,3 +3,7 @@ section.content.purchase-order {
   border-radius: 5px;
   padding-top: 10px;
 }
+
+h4.modal-title {
+  font-weight: bold;
+}

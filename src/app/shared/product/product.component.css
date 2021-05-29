@@ -3,6 +3,21 @@ div.card.product {
   border-radius: 6px;
 }
 
-h2 {
+h2,
+h4.modal-title {
   font-weight: bold;
+}
+
+a.page-link {
+  color: black !important;
+}
+
+div.input-group.input-group-sm.ml-auto {
+  margin-right: 25px;
+  margin-bottom: 15px;
+}
+
+nav.ml-auto {
+  margin-right: 25px;
+  margin-top: 10px;
 }
