@@ -5,6 +5,7 @@ import { environment } from "src/environments/environment";
 import { Router } from "@angular/router";
 import { Subject } from "rxjs";
 import Swal from "sweetalert2";
+import { Suplier } from "../model/Suplier";
 
 const apiURL: string = environment.ApiUrl;
 
@@ -32,6 +33,9 @@ export class AuthService {
 
   getAuthStatusListener() {
     return this.authStatusListener.asObservable();
+  }
+  signupSupplier(suplier : any) {
+    return this.http.post<any>(`${apiURL}inventory/suplier`,suplier);
   }
   login(data: any) {
     console.log(data);

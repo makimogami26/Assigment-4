@@ -19,6 +19,10 @@ export class ProductService {
       .pipe(
         map((res) => {
           return res.data || {};
+          // const result = res.data;
+          // result.forEach((item) => {
+          //   console.log(item);
+          // });
         })
       );
   }
