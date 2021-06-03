@@ -9,7 +9,6 @@ import { environment } from "src/environments/environment";
 import { Router } from "@angular/router";
 import { Subject } from "rxjs";
 import Swal from "sweetalert2";
-import { Supplier } from "../model/Supplier";
 
 const apiURL: string = environment.ApiUrl;
 
@@ -44,7 +43,10 @@ export class AuthService {
     return this.http
       .post<any>(`${apiURL}/inventory/suplier`, data)
       .subscribe((response: any) => {
-        console.log(response);
+        if (response.success) {
+          this.router.navigate(["/user/inventory"]);
+        }
+        Swal.fire("Success", "Add Supplier Sukses", "success");
       });
   }
   login(data: any) {
