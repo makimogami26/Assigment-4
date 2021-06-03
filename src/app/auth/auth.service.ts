@@ -9,7 +9,7 @@ import { environment } from "src/environments/environment";
 import { Router } from "@angular/router";
 import { Subject } from "rxjs";
 import Swal from "sweetalert2";
-import { Suplier } from "../model/Suplier";
+import { Supplier } from "../model/Supplier";
 
 const apiURL: string = environment.ApiUrl;
 
@@ -39,13 +39,13 @@ export class AuthService {
     return this.authStatusListener.asObservable();
   }
   signupSupplier(data: any) {
-    console.log("ok2")
-    console.log(data)
-    return this.http.post<any>(`${apiURL}/inventory/suplier`, data).subscribe((response : any )=>{
-      console.log(response)
-    });
-    
-    
+    console.log("ok2");
+    console.log(data);
+    return this.http
+      .post<any>(`${apiURL}/inventory/suplier`, data)
+      .subscribe((response: any) => {
+        console.log(response);
+      });
   }
   login(data: any) {
     console.log(data);
