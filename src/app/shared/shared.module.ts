@@ -8,6 +8,9 @@ import { PurchaseOrderComponent } from "./purchase-order/purchase-order.componen
 import { FormPurchaseOrderComponent } from "./form-purchase-order/form-purchase-order.component";
 import { InvoiceComponent } from "./invoice/invoice.component";
 import { TopTenProductComponent } from "./top-ten-product/top-ten-product.component";
+import { AuthRoutingModule } from "../auth/auth-routing.module";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -20,7 +23,7 @@ import { TopTenProductComponent } from "./top-ten-product/top-ten-product.compon
     InvoiceComponent,
     TopTenProductComponent,
   ],
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule, ReactiveFormsModule , HttpClientModule],
   exports: [
     ProductComponent,
     FormProductComponent,
