@@ -109,9 +109,7 @@
               "src/styles.css",              
               "node_modules/admin-lte/docs_html/assets/css/adminlte.css"
             ],
-            "scripts": [
-              "node_modules/admin-lte/docs_html/assets/css/adminlte.css"
-            ]
+            "scripts": []
           }
         },
         "lint": {
