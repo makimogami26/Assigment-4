@@ -24,6 +24,8 @@ import { CashierComponent } from './_components/cashier/cashier.component';
 import { AuthService } from './_services/auth.service';
 import { AuthInterceptor } from './_services/auth.interceptor';
 import { ProductListComponent } from './_components/shared/product-list/product-list.component';
+import { CashflowComponent } from './_components/owner/cashflow/cashflow.component';
+import { ResetPasswordComponent } from './_components/reset-password/reset-password.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +46,8 @@ import { ProductListComponent } from './_components/shared/product-list/product-
     SuplierDetailsComponent,
     CashierComponent,
     ProductListComponent,
+    CashflowComponent,
+    ResetPasswordComponent,
   ],
   imports: [
     BrowserModule,
