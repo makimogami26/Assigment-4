@@ -43,7 +43,7 @@ import { ProductListComponent } from './_components/shared/product-list/product-
     CreateUserComponent,
     SuplierDetailsComponent,
     CashierComponent,
-    ProductListComponent
+    ProductListComponent,
   ],
   imports: [
     BrowserModule,
