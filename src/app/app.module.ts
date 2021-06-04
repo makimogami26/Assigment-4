@@ -26,6 +26,11 @@ import { AuthInterceptor } from './_services/auth.interceptor';
 import { ProductListComponent } from './_components/shared/product-list/product-list.component';
 import { CashflowComponent } from './_components/owner/cashflow/cashflow.component';
 import { ResetPasswordComponent } from './_components/reset-password/reset-password.component';
+import { DeliveryOrderComponent } from './_components/inventory/delivery-order/delivery-order.component';
+import { IncomeComponent } from './_components/finance/income/income.component';
+import { OutcomeComponent } from './_components/finance/outcome/outcome.component';
+import { ReceiptComponent } from './_components/cashier/receipt/receipt.component';
+import { CartComponent } from './_components/cashier/cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +53,11 @@ import { ResetPasswordComponent } from './_components/reset-password/reset-passw
     ProductListComponent,
     CashflowComponent,
     ResetPasswordComponent,
+    DeliveryOrderComponent,
+    IncomeComponent,
+    OutcomeComponent,
+    ReceiptComponent,
+    CartComponent,
   ],
   imports: [
     BrowserModule,
