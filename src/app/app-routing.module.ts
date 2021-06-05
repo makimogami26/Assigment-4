@@ -17,7 +17,7 @@ const routes: Routes = [
     component: OwnerComponent,
   },
   {
-    path: "owner/create-account",
+    path: "owner/create-user",
     component: CreateUserComponent,
   },
   {
