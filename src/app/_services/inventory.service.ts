@@ -15,5 +15,8 @@ export class InventoryService {
     console.log(data)
     return this.http.post<any>(`${apiURL}/inventory/suplier`, data);
   }
+  addProduct(data:any){
+    return this.http.post<any>(`${apiURL}/inventory/product` ,  data);
+  }
 }
 

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { Router } from "@angular/router";
-import { Suplier } from 'src/app/model/Suplier';
+import { Suplier} from "src/app/_models/Suplier"
 import { AuthService } from 'src/app/_services/auth.service';
 import { SupplierService } from 'src/app/_services/supplier.service';
 
