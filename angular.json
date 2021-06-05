@@ -106,13 +106,10 @@
             "karmaConfig": "karma.conf.js",
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
-              "src/styles.css",
-              
+              "src/styles.css",              
               "node_modules/admin-lte/docs_html/assets/css/adminlte.css"
             ],
-            "scripts": [
-              
-            ]
+            "scripts": []
           }
         },
         "lint": {
