@@ -24,11 +24,12 @@ url: any
       new_username: [null, [Validators.required]],
       new_email: [null, [Validators.required]],
       role: [null, [Validators.required]],
+      originUrl: this.url
     });
   }
   onSubmit() {
 
-    this.ownerService.createUser(this.createUserForm.value, this.url).subscribe((response: any) => {
+    this.ownerService.createUser(this.createUserForm.value).subscribe((response: any) => {
       console.log(response)
       if (response.success) {
         Swal.fire("Success", response.message, response.data);

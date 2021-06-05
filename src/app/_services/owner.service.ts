@@ -9,10 +9,10 @@ const apiURL: string = environment.ApiUrl;
 export class OwnerService {
 
   constructor(private http: HttpClient) { }
-  createUser(data: any, url: any) {
+  createUser(data: any) {
     console.log(data);
     console.log("cek url", apiURL);
-    return this.http.post<{ logToken: string }>(`${apiURL}/owner/create-user`, data, url)
+    return this.http.post<{ logToken: string }>(`${apiURL}/owner/create-user`, data)
   }
 }
 
