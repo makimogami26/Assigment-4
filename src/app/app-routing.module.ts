@@ -7,11 +7,16 @@ import { CreateUserComponent } from './_components/owner/create-user/create-user
 import { OwnerComponent } from './_components/owner/owner.component';
 import { LoginComponent } from './_components/login/login.component';
 import { AuthGuard } from './_services/auth.guard';
+import { ForgetPasswordComponent } from './_components/login/forget-password/forget-password.component';
 
 const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent,
+  },
+  {
+    path: 'login/forget-password',
+    component: ForgetPasswordComponent,
   },
   {
     path: 'owner',
