@@ -10,7 +10,7 @@ import Swal from 'sweetalert2';
   styleUrls: ['./create-user.component.css']
 })
 export class CreateUserComponent implements OnInit {
-url: any
+  url: any
   createUserForm!: FormGroup;
   constructor(
     public formBuilder: FormBuilder,

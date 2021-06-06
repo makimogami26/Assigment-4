@@ -21,7 +21,11 @@ export class UserService {
     console.log('cek url', apiURL);
     return this.http.put<{ logToken: string }>(`${apiURL}/login`, data);
   }
-
+  forgetPassword(data: any) {
+    console.log(data);
+    console.log('cek url', apiURL);
+    return this.http.put<{ logToken: string }>(`${apiURL}/login/forget-password`, data);
+  }
   logout() {
     return this.http.patch(`${apiURL}/logout`, this.auth.getToken);
   }
