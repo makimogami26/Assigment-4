@@ -6,36 +6,38 @@ import { InventoryComponent } from './_components/inventory/inventory.component'
 import { CreateUserComponent } from './_components/owner/create-user/create-user.component';
 import { OwnerComponent } from './_components/owner/owner.component';
 import { LoginComponent } from './_components/login/login.component';
+import { AuthGuard } from './_services/auth.guard';
 
 const routes: Routes = [
   {
-    path: "login",
+    path: 'login',
     component: LoginComponent,
   },
   {
-    path: "owner",
+    path: 'owner',
     component: OwnerComponent,
+    canActivate: [AuthGuard],
   },
   {
-    path: "owner/create-user",
+    path: 'owner/create-user',
     component: CreateUserComponent,
   },
   {
-    path: "inventory",
+    path: 'inventory',
     component: InventoryComponent,
   },
   {
-    path: "cashier",
+    path: 'cashier',
     component: CashierComponent,
   },
   {
-    path: "finance",
+    path: 'finance',
     component: FinanceComponent,
   },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
