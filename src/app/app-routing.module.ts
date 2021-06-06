@@ -8,6 +8,7 @@ import { OwnerComponent } from './_components/owner/owner.component';
 import { LoginComponent } from './_components/login/login.component';
 import { AuthGuard } from './_services/auth.guard';
 import { ForgetPasswordComponent } from './_components/login/forget-password/forget-password.component';
+import { ResetPasswordComponent } from './_components/login/reset-password/reset-password.component';
 
 const routes: Routes = [
   {
@@ -17,6 +18,10 @@ const routes: Routes = [
   {
     path: 'login/forget-password',
     component: ForgetPasswordComponent,
+  },
+  {
+    path: '/login/reset-password/:user_id/:superkey',
+    component: ResetPasswordComponent,
   },
   {
     path: 'owner',
