@@ -19,7 +19,7 @@ url: any
   ) { }
 
   ngOnInit(): void {
-    this.url = location.origin + "/user/reset-password";
+    this.url = location.origin + "/reset-password";
     this.createUserForm = this.formBuilder.group({
       new_username: [null, [Validators.required]],
       new_email: [null, [Validators.required]],
