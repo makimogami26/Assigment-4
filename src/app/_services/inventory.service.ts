@@ -20,7 +20,7 @@ export class InventoryService {
   addProduct(data:any){
     return this.http.post<any>(`${apiURL}/inventory/product` ,  data);
   }
-  addSupplier(data: any){
+  addPurchaseOrder(data: any){
     return this.http.post<any>(`${apiURL}/inventory/purchase-order` , data);
   }
   getProduct(){
@@ -30,5 +30,6 @@ export class InventoryService {
     })
     );
   }
+  
 }
 

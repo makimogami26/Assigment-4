@@ -32,6 +32,7 @@ import { IncomeComponent } from './_components/finance/income/income.component';
 import { OutcomeComponent } from './_components/finance/outcome/outcome.component';
 import { ReceiptComponent } from './_components/cashier/receipt/receipt.component';
 import { CartComponent } from './_components/cashier/cart/cart.component';
+import { PurchaseFormComponent } from './_components/inventory/purchase-form/purchase-form.component';
 
 @NgModule({
   declarations: [
@@ -59,6 +60,7 @@ import { CartComponent } from './_components/cashier/cart/cart.component';
     OutcomeComponent,
     ReceiptComponent,
     CartComponent,
+    PurchaseFormComponent
   ],
   imports: [
     BrowserModule,
@@ -66,9 +68,12 @@ import { CartComponent } from './_components/cashier/cart/cart.component';
     HttpClientModule,
     CommonModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
-  providers: [AuthService,{provide : HTTP_INTERCEPTORS, useClass:AuthInterceptor,multi:true}],
-  bootstrap: [AppComponent]
+  providers: [
+    AuthService,
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
+  ],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
