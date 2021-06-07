@@ -15,6 +15,15 @@ export class AuthService {
   public loginStatusListener = new Subject<boolean>();
   constructor(private http: HttpClient, private router: Router) { }
 
+  login(reqBody: any) {
+    return this.http.put(`${apiURL}/login`, reqBody);
+  }
+  forgetPassword(reqBody: any) {
+    return this.http.put(`${apiURL}/login/forget-password`, reqBody);
+  }
+  resetPassword(user_id: any, superkey: any, reqBody: any) {
+    return this.http.patch(`${apiURL}/login/reset-password/${user_id}/${superkey}`, reqBody);
+  }
   getToken() {
     return localStorage.getItem('access_token');
   }
@@ -23,15 +32,6 @@ export class AuthService {
   }
   getAuthStatusListener() {
     return this.loginStatusListener.asObservable();
-  }
-  login(reqBody: any) {
-    return this.http.put<{ logToken: string }>(`${apiURL}/login`, reqBody);
-  }
-  forgetPassword(reqBody: any) {
-    return this.http.put<{ logToken: string }>(`${apiURL}/login/forget-password`, reqBody);
-  }
-  resetPassword(user_id: any, superkey: any, reqBody: any) {
-    return this.http.put<{ logToken: string }>(`${apiURL}/login/reset-password/${user_id}/${superkey}`, reqBody);
   }
   getIsLogin() {
     const token = this.getToken();
