@@ -23,6 +23,10 @@ export class InventoryService {
   addPurchaseOrder(data: any){
     return this.http.post<any>(`${apiURL}/inventory/purchase-order` , data);
   }
+  addDeliveryOrder(data:any){
+    return this.http.post<any>(`${apiURL}/inventory/delivery-order` , data);
+  }
+  
   getProduct(){
     return this.http
     .get<any>(`${apiURL}/inventory/product`).pipe(map((res) => {
@@ -30,6 +34,7 @@ export class InventoryService {
     })
     );
   }
+  
   
 }
 
