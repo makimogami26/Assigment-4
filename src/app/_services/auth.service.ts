@@ -11,7 +11,7 @@ const apiURL: string = environment.ApiUrl;
 export class AuthService {
   public localStorage: any;
   public isLoggedIn = true || false;
-  public loginStatusListener = new Subject<boolean>();
+  // public loginStatusListener = new Subject<boolean>();
   constructor(private http: HttpClient, private router: Router) { }
 
   login(reqBody: any) {
@@ -29,9 +29,9 @@ export class AuthService {
   getUserRole() {
     return localStorage.getItem('role');
   }
-  getAuthStatusListener() {
-    return this.loginStatusListener.asObservable();
-  }
+  // getAuthStatusListener() {
+  //   return this.loginStatusListener.asObservable();
+  // }
   getIsLogin() {
     const token = this.getToken();
     if (token != null) {
