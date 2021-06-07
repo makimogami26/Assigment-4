@@ -14,17 +14,16 @@ const apiURL: string = environment.ApiUrl;
   providedIn: 'root',
 })
 export class UserService {
-  constructor(private http: HttpClient, private auth: AuthService) {}
+  constructor(private http: HttpClient, private auth: AuthService) { }
 
-  login(data: any) {
-    console.log(data);
-    console.log('cek url', apiURL);
-    return this.http.put<{ logToken: string }>(`${apiURL}/login`, data);
+  login(reqBody: any) {
+    return this.http.put<{ logToken: string }>(`${apiURL}/login`, reqBody);
   }
-  forgetPassword(data: any) {
-    console.log(data);
-    console.log('cek url', apiURL);
-    return this.http.put<{ logToken: string }>(`${apiURL}/login/forget-password`, data);
+  forgetPassword(reqBody: any) {
+    return this.http.put<{ logToken: string }>(`${apiURL}/login/forget-password`, reqBody);
+  }
+  resetPassword(user_id: any, superkey: any, reqBody: any) {
+    return this.http.put<{ logToken: string }>(`${apiURL}/login/reset-password/${user_id}/${superkey}`, reqBody);
   }
   logout() {
     return this.http.delete(`${apiURL}/logout`);

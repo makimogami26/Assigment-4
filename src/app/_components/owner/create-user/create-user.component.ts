@@ -19,7 +19,7 @@ export class CreateUserComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.url = location.origin + "/reset-password";
+    this.url = location.origin + "/login/reset-password";
     this.createUserForm = this.formBuilder.group({
       new_username: [null, [Validators.required]],
       new_email: [null, [Validators.required]],

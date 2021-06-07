@@ -20,7 +20,7 @@ const routes: Routes = [
     component: ForgetPasswordComponent,
   },
   {
-    path: '/login/reset-password/:user_id/:superkey',
+    path: 'login/reset-password/:user_id/:superkey',
     component: ResetPasswordComponent,
   },
   {

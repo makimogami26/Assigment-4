@@ -14,11 +14,11 @@ export class ForgetPasswordComponent implements OnInit {
   @Output() inputEmail!: EventEmitter<{ email: string }>;
   url: any;
   forgetPasswordForm!: FormGroup;
-  constructor(private userService: UserService, private auth: AuthService, private router: Router) {
+  constructor(private userService: UserService) {
     this.inputEmail = new EventEmitter<{ email: string }>();
   }
   ngOnInit() {
-    this.url = location.origin + "/reset-password";
+    this.url = location.origin + "/login/reset-password";
     this.forgetPasswordForm = new FormGroup({
       email: new FormControl(null, [Validators.required, Validators.email]),
       originUrl: this.url
