@@ -44,4 +44,5 @@ export class CreateProductComponent implements OnInit {
      Swal.fire("Success", "Add Product success..", "success");
    });
  }
+ 
 }
