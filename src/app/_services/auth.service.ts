@@ -33,7 +33,7 @@ export class AuthService {
   //   return this.loginStatusListener.asObservable();
   // }
   getIsLogin() {
-    const token = this.getToken();
+    const token = localStorage.getItem('access_token');
     if (token != null) {
       this.isLoggedIn = true;
     } else this.isLoggedIn = false;
