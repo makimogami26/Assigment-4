@@ -16,14 +16,9 @@ export class AuthService {
   constructor(private http: HttpClient, private router: Router) { }
 
   getToken() {
-    console.log('cari token');
-
     return localStorage.getItem('access_token');
   }
-  getIsAuth() {
-    return this.isLoggedIn;
-  }
-  getUserId() {
+  getUserRole() {
     return this.userRole;
   }
   getAuthStatusListener() {
@@ -38,17 +33,19 @@ export class AuthService {
   resetPassword(user_id: any, superkey: any, reqBody: any) {
     return this.http.put<{ logToken: string }>(`${apiURL}/login/reset-password/${user_id}/${superkey}`, reqBody);
   }
-  get isLogin() {
-    let token = localStorage.getItem('access_token');
+  getIsLogin() {
+    const token = this.getToken();
     if (token != null) {
-      return true;
-    } else return false;
+      this.isLoggedIn = true;
+    } else this.isLoggedIn = false;
+    return this.isLoggedIn;
   }
   logout() {
-    let clearToken = localStorage.removeItem('access_token');
-    if (clearToken == null) {
-      this.router.navigate(['login']);
+    const isLogin = this.getIsLogin();
+    if (isLogin == true) {
+      localStorage.removeItem('access_token')
     };
+    this.router.navigate(['login']);
     return this.http.delete(`${apiURL}/logout`);
   }
 }

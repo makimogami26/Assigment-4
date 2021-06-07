@@ -24,8 +24,8 @@ export class LoginComponent implements OnInit {
   }
   onSubmit() {
     this.authServices.login(this.loginForm.value).subscribe((response: any) => {
-      localStorage.setItem("access_token", response.data.logToken);
       if (response.success) {
+        localStorage.setItem("access_token", response.data.logToken);
         this.authServices.isLoggedIn = true;
         this.authServices.userRole = response.data.role;
         this.authServices.loginStatusListener.next(true);
