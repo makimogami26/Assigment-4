@@ -24,6 +24,7 @@ ul.nav.nav-pills.nav-sidebar.flex-column {
 a.brand-link {
   background-color: #03001c !important;
   text-decoration: none;
+  border-right: 1px solid grey;
 }
 
 .btn-sm.btn-secondary.dropdown-toggle {
@@ -33,10 +34,6 @@ a.brand-link {
   border-radius: 7px;
   margin-top: 4px;
   margin-left: 5px;
-}
-
-a.brand-link {
-  border-right: 1px solid grey;
 }
 
 div.card.order {

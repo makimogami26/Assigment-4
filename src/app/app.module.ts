@@ -33,6 +33,7 @@ import { OutcomeComponent } from './_components/finance/outcome/outcome.componen
 import { ReceiptComponent } from './_components/cashier/receipt/receipt.component';
 import { CartComponent } from './_components/cashier/cart/cart.component';
 import { PurchaseFormComponent } from './_components/inventory/purchase-form/purchase-form.component';
+import { HomeComponent } from './_components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +61,8 @@ import { PurchaseFormComponent } from './_components/inventory/purchase-form/pur
     OutcomeComponent,
     ReceiptComponent,
     CartComponent,
-    PurchaseFormComponent
+    PurchaseFormComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
