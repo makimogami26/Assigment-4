@@ -1,58 +1,49 @@
-<body class="hold-transition register-page">
-  <div class="register-box">
-    <div class="card card-outline card-primary">
-      <div class="card-header text-center">
-        <a href="../../index2.html" class="h4"><b>Acong</b> Kelontong</a>
-      </div>
-      <div class="card-body">
-        <p class="login-box-msg">Register a new employee</p>
-
-        <form [formGroup]="createUserForm" (ngSubmit)="onSubmit()">
-          <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Full name" formControlName="new_username" />
-            <div class="input-group-append">
-              <div class="input-group-text">
-                <span class="fas fa-user"></span>
-              </div>
-            </div>
-          </div>
-          <div class="input-group mb-3">
-            <input type="email" class="form-control" placeholder="Email" formControlName="new_email" />
-            <div class="input-group-append">
-              <div class="input-group-text">
-                <span class="fas fa-envelope"></span>
-              </div>
-            </div>
-          </div>
-
-          <div class="input-group mb-3">
-            <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" formControlName="role">
-              <option selected>Role</option>
-              <option value="finance">Finance</option>
-              <option value="cashier">Cashier</option>
-              <option value="inventory">Inventory</option>
-            </select>
-            <div class="input-group-append">
-              <div class="input-group-text">
-                <span class="fas fa-users"></span>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-8"></div>
-            <!-- /.col -->
-            <div class="col-4">
-              <button type="submit" class="btn btn-primary btn-block">
-                Register
-              </button>
-            </div>
-            <!-- /.col -->
-          </div>
-        </form>
-      </div>
-      <!-- /.form-box -->
-    </div>
-    <!-- /.card -->
+<div class="card form-create-user">
+  <div class="card-header border-transparent">
+    <h2 class="card-title">Form Tambah Supplier</h2>
   </div>
-  <!-- /.register-box -->
-</body>
+  <hr />
+  <div class="card-body p-0">
+    <form [formGroup]="createUserForm" (ngSubmit)="onSubmit()">
+      <div class="card-body form-row">
+        <div class="form-group col-4 col-md-4">
+          <label for="inputNamaSupplier">Nama Karyawan</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Full name"
+            formControlName="new_username"
+          />
+        </div>
+
+        <div class="form-group col-4 col-md-4">
+          <label for="inputContact">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            placeholder="Email"
+            formControlName="new_email"
+          />
+        </div>
+
+        <div class="form-group col-4 col-md-4">
+          <label for="inputAddress">Role</label>
+          <select
+            class="custom-select mr-sm-2"
+            id="inlineFormCustomSelect"
+            formControlName="role"
+          >
+            <option selected>Role</option>
+            <option value="finance">Finance</option>
+            <option value="cashier">Cashier</option>
+            <option value="inventory">Inventory</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="card-footer">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>

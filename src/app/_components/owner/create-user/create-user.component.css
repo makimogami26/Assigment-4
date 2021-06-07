@@ -1,10 +1,8 @@
-div.register-box div.card.card-outline.card-primary {
-    background-color: #03001c;
-    color: white;
-    border-radius: 10px;
-  }
-  
-  div.card-header.text-center {
-    border-bottom: 1px solid white;
-  }
-  
+div.card.form-create-user {
+  border: 2px solid black;
+  border-radius: 6px;
+}
+
+h2 {
+  font-weight: bold;
+}

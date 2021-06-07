@@ -9,6 +9,7 @@ import { LoginComponent } from './_components/login/login.component';
 import { AuthGuard } from './_services/auth.guard';
 import { ForgetPasswordComponent } from './_components/login/forget-password/forget-password.component';
 import { ResetPasswordComponent } from './_components/login/reset-password/reset-password.component';
+import { HomeComponent } from './_components/home/home.component';
 
 const routes: Routes = [
   {
@@ -43,6 +44,10 @@ const routes: Routes = [
   {
     path: 'finance',
     component: FinanceComponent,
+  },
+  {
+    path: '',
+    component: HomeComponent,
   },
 ];
 
