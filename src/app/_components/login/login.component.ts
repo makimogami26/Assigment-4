@@ -28,7 +28,6 @@ export class LoginComponent implements OnInit {
         localStorage.setItem("access_token", response.data.logToken);
         localStorage.setItem("role", response.data.role);
 
-        this.authServices.isLoggedIn = true;
         // this.authServices.loginStatusListener.next(true);
         this.router.navigate(["/" + response.data.role]);
         Swal.fire("Success", response.message, "success");

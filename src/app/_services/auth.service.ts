@@ -10,7 +10,6 @@ const apiURL: string = environment.ApiUrl;
 })
 export class AuthService {
   public localStorage: any;
-  public isLoggedIn = true || false;
   // public loginStatusListener = new Subject<boolean>();
   constructor(private http: HttpClient, private router: Router) { }
 
@@ -33,11 +32,10 @@ export class AuthService {
   //   return this.loginStatusListener.asObservable();
   // }
   getIsLogin() {
-    const token = localStorage.getItem('access_token');
-    if (token != null) {
-      this.isLoggedIn = true;
-    } else this.isLoggedIn = false;
-    return this.isLoggedIn;
+    const token = this.getToken();
+    if (token == null) {
+      return false;
+    } else return true;
   }
   logout() {
     const isLogin = this.getIsLogin();
