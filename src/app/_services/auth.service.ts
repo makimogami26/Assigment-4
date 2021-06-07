@@ -42,7 +42,8 @@ export class AuthService {
   logout() {
     const isLogin = this.getIsLogin();
     if (isLogin == true) {
-      localStorage.removeItem('access_token')
+      localStorage.removeItem('access_token');
+      localStorage.removeItem('role');
     };
     this.router.navigate(['login']);
     return this.http.delete(`${apiURL}/logout`);
