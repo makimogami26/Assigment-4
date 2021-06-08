@@ -11,6 +11,8 @@ import { InventoryService } from 'src/app/_services/inventory.service';
   styleUrls: ['./product-list.component.css'],
 })
 export class ProductListComponent implements OnInit {
+  title = 'Custom Search';
+  searchText: any;
   Product!: Product[];
   constructor(
     private http: HttpClient,

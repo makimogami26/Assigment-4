@@ -34,6 +34,7 @@ import { ReceiptComponent } from './_components/cashier/receipt/receipt.componen
 import { CartComponent } from './_components/cashier/cart/cart.component';
 import { PurchaseFormComponent } from './_components/inventory/purchase-form/purchase-form.component';
 import { HomeComponent } from './_components/home/home.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
   declarations: [
@@ -71,6 +72,7 @@ import { HomeComponent } from './_components/home/home.component';
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
+    Ng2SearchPipeModule
   ],
   providers: [
     AuthService,
