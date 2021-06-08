@@ -46,9 +46,10 @@ const routes: Routes = [
     component: FinanceComponent,
   },
   {
-    path: '',
+    path: 'home',
     component: HomeComponent,
   },
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
 ];
 
 @NgModule({
