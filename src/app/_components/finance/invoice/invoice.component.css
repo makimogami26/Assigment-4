@@ -1,17 +1,14 @@
-section.content {
-    border: 2px solid black;
-    border-radius: 5px;
-    padding-top: 10px;
-  }
-  
-  div.content-wrapper {
-    background-color: white;
-  }
-  
-  div.row.invoice-info {
-    background-color: #03001c;
-    color: white;
-    border-radius: 5px;
-    padding: 5px;
-  }
-  
+div.invoice {
+  border: 2px solid black;
+  border-radius: 5px;
+  padding-top: 10px;
+}
+
+tbody {
+  cursor: pointer;
+}
+
+input,
+h4 {
+  margin-left: 10px;
+}
