@@ -1,0 +1,16 @@
+section.cart {
+  border: 2px solid black;
+  border-radius: 5px;
+  padding-top: 10px;
+}
+
+section.cart div.content-header {
+  margin-top: -10px;
+  background-color: black;
+  color: white;
+}
+
+thead {
+  background-color: black;
+  color: white;
+}

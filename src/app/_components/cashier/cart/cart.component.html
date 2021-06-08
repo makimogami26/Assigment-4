@@ -1,1 +1,79 @@
-<p>cart works!</p>
+<section class="cart" *ngFor="let cart of listCart">
+  <div class="content-header">
+    <h1>CART</h1>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <div class="invoice p-3 mb-3">
+        <div class="row">
+          <div class="col-12">
+            <small class="float-right">Tanggal: {{ cart.date }}</small>
+          </div>
+        </div>
+
+        <div class="row invoice-info">
+          <div class="col-sm-4 invoice-col">
+            <b>Cart ID : </b> {{ cart._id }}<br />
+            <b>Admin ID : </b> {{ cart.admin_id }}<br />
+            <br />
+          </div>
+
+          <div class="col-sm-4 invoice-col"></div>
+          <div class="col-sm-4 invoice-col"></div>
+        </div>
+
+        <div class="row">
+          <div class="col-12 table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Produk</th>
+                  <th>Qty</th>
+                  <th>Status</th>
+                  <th>Harga</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>{{ cart.product }}</td>
+                  <td>{{ cart.quantity }}</td>
+                  <td>{{ cart.status }}</td>
+                  <td>Rp {{ cart.price }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-7"></div>
+          <div class="col-5">
+            <div class="table-responsive">
+              <table class="table">
+                <!-- <tr>
+                  <th style="width: 50%">Total:</th>
+                  <td>Rp 114.000.050</td>
+                </tr> -->
+                <tr>
+                  <th>Diskon (10%)</th>
+                  <td>Rp {{ cart.tax }}</td>
+                </tr>
+                <tr>
+                  <th>Total Bayar:</th>
+                  <td>Rp {{ cart.totalPrice }}</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="row no-print">
+          <div class="col-12">
+            <button type="button" class="btn btn-dark float-right">
+              Bayar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
