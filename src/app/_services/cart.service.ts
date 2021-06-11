@@ -8,15 +8,20 @@ const apiURI: string = environment.ApiUrl;
 @Injectable({
   providedIn: 'root'
 })
-export class ReceiptService {
+export class CartService {
 
   constructor(private http: HttpClient) { }
 
-  getCheckout(){
-    return this.http.get<any>(`${apiURI}/cashier/checkout`).pipe(
+  getListCart(){
+    return this.http.get<any>(`${apiURI}/cashier/cart`).pipe(
       map((res)=>{
-        return res.data || {};
+        return res.data || {}
       })
-    );
+    )
   }
+
+  getCancelItem(){
+    return this.http.get<any>(`${apiURI}/cashier/cart/:cart_id`)
+  }
+
 }

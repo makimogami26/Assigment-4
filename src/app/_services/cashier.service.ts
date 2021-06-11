@@ -11,11 +11,28 @@ const apiURL: string = environment.ApiUrl;
 export class CashierService {
   constructor(private http: HttpClient) {}
 
-  getListCart() {
-    return this.http.get<any>(`${apiURL}/cashier/cart`).pipe(
+  getAddToCart() {
+    return this.http.get<any>(`${apiURL}/cashier/product`).pipe(
       map((res) => {
         return res.data || {};
       })
     );
   }
+
+  getSearchProduct() {
+    return this.http.get<any>(`${apiURL}/cashier/product`).pipe(
+      map((res) => {
+        return res.data || {};
+      })
+    );
+  }
+
+  getaddToCartManual() {
+    return this.http.get<any>(`${apiURL}/cashier/product:product_id`).pipe(
+      map((res) => {
+        return res.data || {};
+      })
+    );
+  }
+
 }

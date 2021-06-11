@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { Cart } from 'src/app/_models/Cart';
-import { CashierService } from 'src/app/_services/cashier.service';
+import { CartService } from 'src/app/_services/cart.service';
 
 @Component({
   selector: 'app-cart',
@@ -12,12 +12,13 @@ export class CartComponent implements OnInit, OnDestroy {
   listCart!: Cart[];
   private authStatusSub = new Subscription();
 
-  constructor(private cashierService: CashierService) {}
+  constructor(private cartService: CartService) {}
 
   ngOnInit(): void {
-    this.authStatusSub = this.cashierService.getListCart().subscribe((Cart) => {
+    this.authStatusSub = this.cartService.getListCart().subscribe((Cart) => {
       this.listCart = Cart;
     });
+    this.cartService.getCancelItem();
   }
 
   ngOnDestroy() {
